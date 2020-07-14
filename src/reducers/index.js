@@ -1,18 +1,48 @@
-import {ADD_MOVIES} from '../actions'
+import {ADD_MOVIES , ADD_FAVOURITE, REMOVE_FAVOURITE, SET_SHOW_FAVOURITE} from '../actions'
 
 const initialMoviesState = {
     list : [],
-    favourites : []
+    favourites : [],
+    showFavourite : false
 }
 export default function movies(state = initialMoviesState,action)
 {
-    if(action.type === ADD_MOVIES)
-    {
-        return {
-            ...state,
-            list : action.movies
-        }
+    // if(action.type === ADD_MOVIES)
+    // {
+    //     return {
+    //         ...state,
+    //         list : action.movies
+    //     }
+    // }
+    // return state;
+
+    // eslint-disable-next-line default-case
+    switch(action.type) {
+        case ADD_MOVIES :
+            return {
+                ...state,
+                list : action.movies
+            }
+        case ADD_FAVOURITE : 
+            return {
+                ...state,
+                favourites :[action.movie, ...state.favourites]
+            }
+        case REMOVE_FAVOURITE :
+            const filterList = state.favourites.filter(
+                movie => movie.Title !== action.movie.Title
+            );
+            return {
+                ...state,
+                favourites : filterList
+            }
+        case SET_SHOW_FAVOURITE :
+            return {
+                ...state,
+                showFavourite : action.value
+            }
+        default :
+            return state;
     }
-    return state;
 }
 
