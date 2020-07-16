@@ -6,7 +6,7 @@ body
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f1f1f1;
+  background: #131819;
 }
 .nav 
 {
@@ -120,8 +120,8 @@ body
   background: #fff;
   padding: 10px;
   margin-right: 13px;
-  border-radius: 3px;
-  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  /* border: 1px solid #e1e1e1; */
 }
 .active-tabs 
 {
@@ -135,11 +135,11 @@ body
 }
 .movie-card 
 {
-  background: #fff;
-  padding: 0;
+  background: #5D6D7E;
+  padding: 5px;
   border: none;
-  border-radius: 3px;
-  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #f1f1f1;
+  border-radius: 10px;
+  /* box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #f1f1f1; */
   display: flex;
 }
 .movie-card:not(:first-child) 
@@ -157,6 +157,7 @@ body
 .movie-card .left img 
 {
   height: 250px;
+  border-radius: 10px;
 }
 .movie-card .right 
 {
@@ -176,7 +177,7 @@ body
 }
 .footer 
 {
-  position: absolute;
+  position: relative;
   bottom: 0;
   display: flex;
   justify-content: space-between;
@@ -187,7 +188,7 @@ body
 .footer .rating 
 {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 800;
 }
 .footer button 
 {
@@ -200,7 +201,7 @@ body
 }
 .favourite-btn 
 {
-  background-color: #2185d0;
+  background-color:#28B463;
   color: #fff;
 }
 .unfavourite-btn 
