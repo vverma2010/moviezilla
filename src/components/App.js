@@ -3,6 +3,7 @@ import {data} from '../data';
 import Navbar from './Navbar';
 import MovieCard from './MovieCard';
 import { addMovies, setShowFavourite } from '../actions';
+import { search } from '../reducers';
 // import movies from '../reducers';
 class App extends React.Component {
 
@@ -20,9 +21,9 @@ class App extends React.Component {
   }
 
   isFavourite = (movie) => {
-    const {favourites} = this.props.store.getState();
+    const {movies} = this.props.store.getState();
 
-    const index = favourites.indexOf(movie);
+    const index = movies.favourites.indexOf(movie);
 
     if(index !== -1)
     {
@@ -34,7 +35,8 @@ class App extends React.Component {
     this.props.store.dispatch(setShowFavourite(value))
   }
   render() {
-    const {list, favourites, showFavourite} = this.props.store.getState();
+    const { movies } = this.props.store.getState();
+    const {list, favourites, showFavourite} = movies //{movies : {}, search : {}}
     const displayTab = showFavourite ? favourites : list;
     return (
       <div className="App">
