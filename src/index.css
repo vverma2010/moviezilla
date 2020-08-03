@@ -59,16 +59,19 @@ body
   font-weight: 600;
   font-size: 14px;
   border: none;
-  padding: 9px 0;
+  padding: 9px;
   border-radius: 4px;
 }
 .search-result 
 {
   display: flex;
+  background-color: #424949;
 }
 .search-result img 
 {
   height: 150px;
+  border-radius: 10px;
+  margin: 4px;
 }
 .search-result > div span 
 {
@@ -139,7 +142,6 @@ body
   padding: 5px;
   border: none;
   border-radius: 10px;
-  /* box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #f1f1f1; */
   display: flex;
 }
 .movie-card:not(:first-child) 
@@ -150,11 +152,11 @@ body
 {
   margin-bottom: 50px;
 }
-.movie-card .left 
+/* .movie-card .left 
 {
   flex: 1;
-}
-.movie-card .left img 
+} */
+.movie-card .left img
 {
   height: 250px;
   border-radius: 10px;
@@ -167,13 +169,15 @@ body
 .movie-card .title 
 {
   padding: 10px 20px;
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 800;
 }
 .movie-card .plot 
 {
   margin-top: 20px;
   padding: 0 20px;
+  font-weight: 600;
+  font-size: 25px;
 }
 .footer 
 {
@@ -201,7 +205,7 @@ body
 }
 .favourite-btn 
 {
-  background-color:#28B463;
+  background-color:#24BE55;
   color: #fff;
 }
 .unfavourite-btn 
