@@ -58,6 +58,7 @@ class Navbar extends React.Component {
   }
 }
 
+
 // class NavWrapper extends React.Component
 // {
 //   render() {
@@ -79,3 +80,8 @@ function mapStateToProps({search})
 const ConnectNavComponent = connect(mapStateToProps)(Navbar);
 
 export default ConnectNavComponent;
+
+
+
+
+// logomakr.com/53PevQ
